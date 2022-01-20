@@ -1,0 +1,25 @@
+.d-flex {
+    display: flex;
+}
+
+#label-input {
+    flex-direction: column;
+}
+input[type=submit] {
+    margin: 20px;
+    margin-bottom: 0;
+    height: 28px;
+    width: 90px;
+    border-radius: 5px;
+}
+#candidat-name {
+    width: 180px;
+    height: 25px;
+    border-radius: 5px;
+}
+
+.row th {
+    width: 90px;
+    height: 25px;
+    border: 2px solid black;
+}
