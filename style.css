@@ -1,3 +1,8 @@
+body {
+  background-color: black;
+  color: #b260e8;
+}
+
 .d-flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11,7 +16,7 @@
           flex-direction: column;
 }
 
-input[type=submit] {
+input[type="submit"] {
   margin: 20px;
   margin-bottom: 0;
   height: 28px;
@@ -25,9 +30,28 @@ input[type=submit] {
   border-radius: 5px;
 }
 
-.row th {
+#table {
+  border-collapse: separate;
+  border-spacing: .5em;
+  padding: 10em 10em;
+}
+
+#table .row {
+  background-color: white;
+}
+
+#table th {
   width: 90px;
   height: 25px;
-  border: 2px solid black;
+  border: 2px solid #b260e8;
+  border-radius: 5px;
+}
+
+#table #inf-row {
+  background-color: black;
+}
+
+#table #inf-row th {
+  border-radius: 0;
 }
 /*# sourceMappingURL=style.css.map */

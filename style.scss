@@ -1,3 +1,7 @@
+body {
+    background-color: black;
+    color: #b260e8;
+}
 .d-flex {
     display: flex;
 }
@@ -5,7 +9,7 @@
 #label-input {
     flex-direction: column;
 }
-input[type=submit] {
+input[type="submit"] {
     margin: 20px;
     margin-bottom: 0;
     height: 28px;
@@ -18,8 +22,25 @@ input[type=submit] {
     border-radius: 5px;
 }
 
-.row th {
-    width: 90px;
-    height: 25px;
-    border: 2px solid black;
+#table {
+    border-collapse: separate;
+    border-spacing: .5em ;
+    padding: 10em 10em ;
+
+    .row {
+        background-color: white;
+    }
+    th {
+        width: 90px;
+        height: 25px;
+        border: 2px solid #b260e8;
+        border-radius: 5px;
+        // margin: 10px;
+    }
+    #inf-row {
+        background-color: black;
+        th {
+            border-radius: 0;
+        }
+    }
 }
