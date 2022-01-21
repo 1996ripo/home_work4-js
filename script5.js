@@ -32,7 +32,7 @@ candidatName.addEventListener('input', e => {
    inputValue = e.target.value;
 })
 
-
+let obj ={};
 form.addEventListener('submit', e => {
    e.preventDefault();
    let addInfo = 0;
@@ -51,8 +51,13 @@ form.addEventListener('submit', e => {
          addRow(inputValue);
       }
    }
-   // Array.prototype.forEach.call(document.getElementsByClassName('votes'), e => {
-   // });
+
+   Array.prototype.forEach.call(document.getElementsByClassName('votes'), e => {
+      console.log(e.toString);
+      Object.assign(obj, {[e.textContent]: `${e}`});
+      
+   });
+   console.log(obj);
    // allVote.shift();
    // console.log(allVote);
    // for (let i = 0; i < .length)
