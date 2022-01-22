@@ -3,10 +3,29 @@ body {
   color: #b260e8;
 }
 
+main {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 700px;
+  margin: auto;
+}
+
+h1 {
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 100px;
+}
+
 .d-flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+#form {
+  margin-bottom: 180px;
 }
 
 #label-input {
@@ -14,11 +33,11 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-left: 10px;
 }
 
 input[type="submit"] {
   margin: 20px;
-  margin-bottom: 0;
   height: 28px;
   width: 90px;
   border-radius: 5px;
@@ -32,26 +51,18 @@ input[type="submit"] {
 
 #table {
   border-collapse: separate;
-  border-spacing: .5em;
-  padding: 10em 10em;
+  border-spacing: 0.5em;
 }
 
 #table .row {
   background-color: white;
 }
 
-#table th {
-  width: 90px;
+#table th,
+#table #inf-row > th {
+  width: 100px;
   height: 25px;
   border: 2px solid #b260e8;
   border-radius: 5px;
-}
-
-#table #inf-row {
-  background-color: black;
-}
-
-#table #inf-row th {
-  border-radius: 0;
 }
 /*# sourceMappingURL=style.css.map */

@@ -5,33 +5,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>homework3</title>
+    <title>duble-2</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
-    <h1>Elections</h1>
-   
-    <form class="d-flex" id='form'> 
-        <div class="d-flex" id="label-input">
-            <label for="c-name">Candidate Name</label>
-            <input type="text" id="candidat-name" name="c-name">
-        </div>
-       <input type="submit" id="vote" value="Vote">
-    </form>
-    <table id="table">
-        <tr id="inf-row">
-            <th class="name">Name</th>
-            <th>Age</th>
-            <th>Country</th>
-            <th class="votes" id="votes">Votes</th>
-        </tr>
-    </table>
-    <!-- <script src="script1-4.js"></script> -->
-    <script src="script5.js"></script>
-    <script src="https://use.fontawesome.com/a7b006625a.js"></script>
-
+    <main class="d-flex">
+        <h1>Elections</h1>
+        <form class="d-flex" id='form'>
+            <div class="d-flex" id="label-input">
+                <label for="c-name">Candidate Name</label>
+                <input type="text" id="candidat-name" name="c-name"  minlength="3" maxlength="12">
+            </div>
+            <input type="submit" id="vote" value="Vote">
+        </form>
+        <table id="table">
+            <thead id="inf-row">
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Country</th>
+                    <th>Votes</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+            </tbody>
+        </table>
+    </main>
+    <script src="script.js"></script>
 </body>
 
 </html>
