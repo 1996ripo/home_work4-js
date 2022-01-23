@@ -57,7 +57,7 @@ function maxLength(text) {
 
 console.log(maxLength('hello hi bay asdfa asgdf asdfs 12345 asdasd_asdasd asdasd, sadasd.'));
 // ------------------5-----------------------------
-let inputName = {};
+// let inputName = {};
 let candidatName = document.getElementById('candidat-name');
 let form = document.getElementById('form');
 let voteButton = document.getElementById('vote');
@@ -83,9 +83,8 @@ function addRow(name, age, country, votes = 1) {
          </tr>`;
 };
 
-let hist = [];
-let allHist = [];
-
+let NameHist = [];
+let allRowHist = [];
 
 
 function sort() {
@@ -99,21 +98,21 @@ function sort() {
 
 form.addEventListener('submit', e => {
    e.preventDefault();
-   if (hist.includes(candidatName.value)) {
-      for (let i = 0; i < hist.length; i++) {
-         if (hist[i] == candidatName.value) {
-            allHist[i].votsReturn();
-            document.querySelector(`[data-element=${candidatName.value}]`).remove();
-            tbody.insertAdjacentHTML('beforeend', `${addRow(candidatName.value, allHist[i].age, allHist[i].country, allHist[i].votes)}`);
+   if (candidatName.value == "") {
+      alert('Name is enpty')
+   } else if (NameHist.includes(candidatName.value)) {
+      for (let i = 0; i < NameHist.length; i++) {
+         if (NameHist[i] == candidatName.value) {
+            allRowHist[i].votsReturn();
+            document.querySelector(`[data-element=${candidatName.value}]`).innerHTML = addRow(candidatName.value, allRowHist[i].age, allRowHist[i].country, allRowHist[i].votes)
             sort();
-            //console.log(addRow(candidatName.value, allHist[i].age, allHist[i].country, allHist[i].votes));
          }
       };
    } else {
-      hist.push(candidatName.value);
+      NameHist.push(candidatName.value);
       let age = getRandomInt(18, 45);
       let country = getRandomTown();
-      allHist.push({
+      allRowHist.push({
          name: `${candidatName.value}`, votes: 1, age: `${age}`, country: `${country}`,
          votsReturn: function () {
             this.votes += 1;
@@ -121,8 +120,5 @@ form.addEventListener('submit', e => {
       })
       tbody.insertAdjacentHTML('beforeend', `${addRow(candidatName.value, age, country)}`);
       sort();
-
-      console.log(addRow(candidatName.value, age, country));
    }
-
 });
